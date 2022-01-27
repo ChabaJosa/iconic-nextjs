@@ -12,7 +12,7 @@ function Nav() {
   //
   return (
     <>
-      <Menu pointing secondary>
+     <Menu inverted>
         <Menu.Item
           name="home"
           active={activeItem === "home"}
