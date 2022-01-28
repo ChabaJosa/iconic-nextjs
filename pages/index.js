@@ -20,7 +20,7 @@ export default function Home() {
             Welcome to <a href="https://nextjs.org">Iconic</a>
           </h1>
           <div className={styles.card}>
-            <a href="/domainSearch">
+            <a href="/domains">
               <p>Go to Domain Search</p>
             </a>
           </div> 

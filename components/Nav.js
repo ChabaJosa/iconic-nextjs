@@ -41,7 +41,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href="/domainSearch">
+          <Link href="/domains">
             <a>Search</a>
           </Link>
         </Menu.Item>

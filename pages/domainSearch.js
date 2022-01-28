@@ -2,6 +2,10 @@ import { List } from "semantic-ui-react";
 
 export default function DomainSArrearch({ domainsArr }) {
   console.log(domainsArr);
+  //
+  // Need to use: https://nextjs.org/docs/api-reference/data-fetching/get-static-paths 
+  // for search
+  //
   if (domainsArr !== undefined) {
     return (
       <div
@@ -43,7 +47,9 @@ export default function DomainSArrearch({ domainsArr }) {
   }
 }
 
-export const getStaticProps = async () => {
+//
+// Gets Req on Build Time
+export const getServerSideProps = async () => {
   //
   // API Docs : https://api.domainsdb.info/v1/
   //
