@@ -9,27 +9,33 @@ export default function Domain({ res }) {
     <>
       <div>
         <h1>Domains related to {name} </h1>
-        <div >
+        <div>
           <List divided relaxed style={{ maxHeight: "50vh" }}>
-            {res.domains.map((item) => {
-              return (
-                <>
-                  <List.Item>
-                    <List.Icon
-                      name="globe"
-                      size="large"
-                      verticalAlign="middle"
-                    />
-                    <List.Content>
-                      <List.Header as="a">{item.domain}</List.Header>
-                      <List.Description as="a">
-                        Last Updated {item.update_date}
-                      </List.Description>
-                    </List.Content>
-                  </List.Item>
-                </>
-              );
-            })}
+            {res.domains !== undefined ? (
+              <>
+                {res.domains.map((item) => {
+                  return (
+                    <>
+                      <List.Item>
+                        <List.Icon
+                          name="globe"
+                          size="large"
+                          verticalAlign="middle"
+                        />
+                        <List.Content>
+                          <List.Header as="a">{item.domain}</List.Header>
+                          <List.Description as="a">
+                            Last Updated {item.update_date}
+                          </List.Description>
+                        </List.Content>
+                      </List.Item>
+                    </>
+                  );
+                })}
+              </>
+            ) : (
+              <div>Couldn't retrieve anything.</div>
+            )}
           </List>
         </div>
       </div>
