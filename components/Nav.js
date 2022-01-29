@@ -21,7 +21,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href="/">
+          <Link href={"/"}>
             <a>Home</a>
           </Link>
         </Menu.Item>
@@ -31,7 +31,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href="/about">
+          <Link href={"/about"}>
             <a>About</a>
           </Link>
         </Menu.Item>
@@ -41,7 +41,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href="/domains">
+          <Link href={"/domains"}>
             <a>Search</a>
           </Link>
         </Menu.Item>

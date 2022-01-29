@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { useRouter } from "next/router";
-import { Input, Button } from "semantic-ui-react";
+import { Input, Button, Header, Icon, Segment } from "semantic-ui-react";
+import styles from "../../styles/Domains.module.css";
+import Image from "next/image";
 //
 export default function DomainList() {
   //
@@ -8,27 +10,40 @@ export default function DomainList() {
   const router = useRouter();
   //
   return (
-    <>
-      <div style={{ width: "90vw", height: "100%" }}>
-        <h1>Domain List</h1>
-        <div>
-          <Input
-            fluid
-            placeholder="Search..."
-            onChange={(e) => {
-              input.current = e.target.value;
-            }}
-          />
-          <Button
-            fluid
-            onClick={() => {
-              router.push(`/domains/${input.current}`);
-            }}
-          >
-            Search
-          </Button>
-        </div>
+    <div className={styles.container}>
+      <Header as="h2">
+        <Icon name="settings" />
+        <Header.Content>
+          Search
+          <Header.Subheader>For Domains</Header.Subheader>
+        </Header.Content>
+      </Header>
+
+      <Input
+        // fluid
+        style={{ maxWidth: "50%" }}
+        focus
+        placeholder="Search..."
+        onChange={(e) => {
+          input.current = e.target.value;
+        }}
+      />
+      <Button
+        // fluid
+        style={{
+          margin: "1rem 0",
+          backgroundColor: "#FFBD59",
+          maxWidth: "50%",
+        }}
+        onClick={() => {
+          router.push(`/domains/${input.current}`);
+        }}
+      >
+        Search
+      </Button>
+      <div className={styles.img}>
+        {/* <Image src="/1.png" alt="me" width={1000} height={500} /> */}
       </div>
-    </>
+    </div>
   );
 }

@@ -7,8 +7,25 @@ export default function Domain({ res }) {
   console.log(res);
   return (
     <>
-      <div>
-        <h1>Domains related to {name} </h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          minWidth: "100%",
+          justifyContent: "flex-start",
+          padding: "2rem",
+        }}
+      >
+        <h1
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-start",
+            minWidth: "100%",
+          }}
+        >
+          Domains related to {name}{" "}
+        </h1>
         <div>
           <List divided relaxed style={{ maxHeight: "50vh" }}>
             {res.domains !== undefined ? (
@@ -34,7 +51,7 @@ export default function Domain({ res }) {
                 })}
               </>
             ) : (
-              <div>Couldn't retrieve anything.</div>
+              <div>Couldnt retrieve anything.</div>
             )}
           </List>
         </div>

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
+// https://dribbble.com/shots/15369006-HuntJobs-Job-Search-Dashboard
 
 export default function Home() {
   return (
@@ -20,9 +22,9 @@ export default function Home() {
             Welcome to <a href="https://nextjs.org">Iconic</a>
           </h1>
           <div className={styles.card}>
-            <a href="/domains">
+            <Link href={"/domains"}>
               <p>Go to Domain Search</p>
-            </a>
+            </Link>
           </div> 
         </div>
       </main>
