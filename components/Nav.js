@@ -26,14 +26,14 @@ function Nav() {
           </Link>
         </Menu.Item>
         <Menu.Item
-          name="about"
+          name=""
           active={activeItem === "about"}
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href={"/about"}>
+          {/* <Link href={"/about"}>
             <a>About</a>
-          </Link>
+          </Link> */}
         </Menu.Item>
         <Menu.Item
           name="search"
@@ -43,6 +43,16 @@ function Nav() {
         >
           <Link href={"/domains"}>
             <a>Search</a>
+          </Link>
+        </Menu.Item>
+        <Menu.Item
+          name="about"
+          active={activeItem === "about"}
+          onClick={handleItemClick}
+          className={styles.font}
+        >
+          <Link href={"/about"}>
+            <a>About</a>
           </Link>
         </Menu.Item>
       </Menu>

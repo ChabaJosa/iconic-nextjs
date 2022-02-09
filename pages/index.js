@@ -18,14 +18,44 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Iconic</a>
-          </h1>
+          <h1 className={styles.title}>Welcome to Iconic</h1>
           <div className={styles.card}>
             <Link href={"/domains"}>
               <p>Go to Domain Search</p>
             </Link>
-          </div> 
+          </div>
+        </div>
+        {/* Parallax */}
+        <div
+          className={styles.container}
+          style={{
+            border: "1px solid red",
+            minWidth: "100%",
+            // backgroundColor: "black",
+          }}
+        >
+          <div className="wrapper">
+            <div className="background-container">
+              <Image
+                // layout='fill'
+                height={250}
+                width={250}
+                src="/public/moon.png"
+                alt="Picture of the moon"
+                className="background"
+              />
+              <Image
+                // layout='fill'
+                height={250}
+                width={250}
+                src="/public/clouds.png"
+                alt="Picture of the clouds"
+                className="foreground"
+              />
+
+              <h1 className="title">Welcome!</h1>
+            </div>
+          </div>
         </div>
       </main>
 
