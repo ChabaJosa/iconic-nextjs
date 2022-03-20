@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import { Button } from "semantic-ui-react";
 // https://dribbble.com/shots/15369006-HuntJobs-Job-Search-Dashboard
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
           </div>
         </div>
         {/* Parallax */}
-        <div
+        {/* <div
           className={styles.container}
           style={{
             border: "1px solid red",
@@ -54,6 +55,37 @@ export default function Home() {
               />
 
               <h1 className="title">Welcome!</h1>
+            </div>
+          </div>
+        </div> */}
+        <div style={{ background: "black", padding: "2rem 2rem 0 2rem", minWidth:'100%' }}>
+          <div className={styles.styledContainer}>
+            <div className={styles.styledSubContainerOne}>
+              <div className={styles.innerSubContainerOner}>
+                <p className={styles.lineHeight}>
+                  <p className={styles.preTitle}>We will make it</p>
+                  <p className={styles.strong}>Happen</p>
+                </p>
+              </div>
+              <p className={styles.subTitle}>ICONIC MEDIA DEVELOPMENT LLC</p>
+            </div>
+            <div className={styles.styledSubContainerTwo}>
+              <p>
+                Here at The Iconic Media we are a full service Design and
+                Software development agency.
+              </p>
+              <p>Have an idea for a website or smarphone app?</p>
+              <div>
+                <Button
+                  secondary
+                  onClick={() => {
+                    // showSubForm(true);
+                    console.log("Hereee11");
+                  }}
+                >
+                  Get A Quote
+                </Button>
+              </div>
             </div>
           </div>
         </div>
