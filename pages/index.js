@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { Button } from "semantic-ui-react";
 // https://dribbble.com/shots/15369006-HuntJobs-Job-Search-Dashboard
@@ -20,11 +18,6 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.container}>
           <h1 className={styles.title}>Welcome to Iconic</h1>
-          <div className={styles.card}>
-            <Link href={"/domains"}>
-              <p>Go to Domain Search</p>
-            </Link>
-          </div>
         </div>
         {/* Parallax */}
         {/* <div
@@ -58,7 +51,13 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-        <div style={{ background: "black", padding: "2rem 2rem 0 2rem", minWidth:'100%' }}>
+        <div
+          style={{
+            background: "#1B1C1D",
+            padding: "2rem 2rem 0 2rem",
+            minWidth: "100%",
+          }}
+        >
           <div className={styles.styledContainer}>
             <div className={styles.styledSubContainerOne}>
               <div className={styles.innerSubContainerOner}>
@@ -88,7 +87,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </main>
 
       <footer className={styles.footer}></footer>

@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import { useRouter } from "next/router";
-import { Input, Button, Header, Icon, Segment } from "semantic-ui-react";
+import { Input, Button, Header, Icon } from "semantic-ui-react";
 import styles from "../../styles/Domains.module.css";
-import Image from "next/image";
 //
 export default function DomainList() {
   //

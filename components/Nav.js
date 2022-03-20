@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from "react"; 
+import { useRouter } from "next/router";
 //
 import { Menu } from "semantic-ui-react";
 import styles from "../styles/Navbar.module.css";
@@ -7,9 +7,17 @@ import styles from "../styles/Navbar.module.css";
 function Nav() {
   //
   const [activeItem, setActiveItem] = useState("home");
+  const router = useRouter();
   //
-  function handleItemClick(e, { name }) {
-    setActiveItem(name);
+  async function handleItemClick(e, { name }) {
+    if (name === "home") {
+      await router.push(`/`);
+    } else if (name === "search") {
+      await router.push(`/domains`);
+    } else {
+      await router.push(`/${name}`);
+    }
+    await setActiveItem(name);
   }
   //
   return (
@@ -21,19 +29,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href={"/"}>
-            <a>Home</a>
-          </Link>
-        </Menu.Item>
-        <Menu.Item
-          name=""
-          active={activeItem === "about"}
-          onClick={handleItemClick}
-          className={styles.font}
-        >
-          {/* <Link href={"/about"}>
-            <a>About</a>
-          </Link> */}
+          <p>Home</p>
         </Menu.Item>
         <Menu.Item
           name="search"
@@ -41,9 +37,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href={"/domains"}>
-            <a>Search</a>
-          </Link>
+          <p>Search</p>
         </Menu.Item>
         <Menu.Item
           name="about"
@@ -51,9 +45,7 @@ function Nav() {
           onClick={handleItemClick}
           className={styles.font}
         >
-          <Link href={"/about"}>
-            <a>About</a>
-          </Link>
+          <p>About</p>
         </Menu.Item>
       </Menu>
     </>
